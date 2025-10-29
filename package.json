@@ -1,5 +1,6 @@
 {
   "name": "hello-world-react-vite",
+  "homepage": "https://snap-crackle-pop.github.io/hello-world-react-vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,9 +10,12 @@
     "lint": "eslint . --ext .ts,.tsx",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
